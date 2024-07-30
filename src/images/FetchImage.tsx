@@ -13,6 +13,10 @@ export const DisplayPictureOfDay: React.FC = () => {
     const [myPictureData, setMyPictureData] = useState<PictureOfDay | null>(null);
 
     const FetchPictureOfDay = async () => {
+        const apiKey = process.env.REACT_APP_NASA_API_KEY;
+        const link = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
+        console.log(apiKey);
+        const response = await fetch(link);
 
         const apiKey = process.env.REACT_APP_NASA_API_KEY;
         const link = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
