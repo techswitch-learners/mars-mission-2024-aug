@@ -10,8 +10,6 @@ function App() {
     <div className="App">
       <Router>
         <h1>MarsioKart</h1>
-        {/* example of using DisplayPictureOfDay */}
-        {/* <DisplayPictureOfDay /> */}
         <Routes>
           <Route path='/'
           element={<Home/>}/>
