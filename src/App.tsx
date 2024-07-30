@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <h1>MarsioKart</h1>
         <Routes>
           <Route path='/'
           element={<Home/>}/>
