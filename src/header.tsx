@@ -8,7 +8,7 @@ const Header: React.FC = () => {
 
   return (
     <div className="App">
-      <Hamburger onClick={handleHamburgerClick} />
+      <Hamburger onClick={handleHamburgerClick} label={""}/>
     </div>
   );
 };
