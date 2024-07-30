@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Set Up
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+run `npm install`
+
+copy the `.env.template` file - save it as `.env` store your NASA API key here so that it won't be uploaded to githubb
 
 ## Available Scripts
 
