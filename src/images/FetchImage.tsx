@@ -10,8 +10,6 @@ interface PictureOfDay {
 
 export const DisplayPictureOfDay: React.FC = () => {
 
-    
-
     const [myPictureData, setMyPictureData] = useState<PictureOfDay | null>(null);
 
     const FetchPictureOfDay = async () => {
