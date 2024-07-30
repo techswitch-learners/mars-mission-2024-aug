@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
+$default-background: #2D3047;
+$default-background-darker: #000000;
+$default-foreground: #A15E49;
+$default-accent-sunglow: #FFD166;
+$default-accent-skyblue: #6DC0D5;
+$text-color: white;
+
+$default-font: "Segoe UI";
+
+.title {
+  color: $text-color;
+  font-size: 24px;
+  line-height: 32px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sub-title {
+  color: $text-color;
+  font-size: 20px;
+  line-height: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button-text {
+  color: $default-accent-skyblue;
+  font-size: 20px;
+  line-height: 32px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.body {
+  color: $text-color;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.supporting-text {
+  color: $text-color;
+  font-size: 10px;
+  line-height: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  text-decoration: none;
 }
