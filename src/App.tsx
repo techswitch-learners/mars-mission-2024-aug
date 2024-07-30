@@ -4,12 +4,14 @@ import './App.scss';
 import Home from './Home/Home';
 import { Quiz } from './Quiz/Quiz';
 import Footer from './Footer/Footer';
+import Header from './header';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <h1>MarsioKart</h1>
+        <div><Header/></div>
         <Routes>
           <Route path='/'
           element={<Home/>}/>
