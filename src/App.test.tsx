@@ -11,13 +11,6 @@ test('renders header', () => {
     const header = screen.getByText(/MarsioKart/i);
     expect(header).toBeInTheDocument();
   });
-/* test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-}); */
-
-
 
 test('calls onClick when Hamburger button is clicked', () => {
     const handleClick = jest.fn();
@@ -28,3 +21,4 @@ test('calls onClick when Hamburger button is clicked', () => {
   
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
+
