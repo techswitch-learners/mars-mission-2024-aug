@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   return (
     <div className="App">
       <Hamburger onClick={handleHamburgerClick} label={""}/>
-      <img src={require('../ImageAssets/marsiokartlogo.jpg')} />
+      <img src={require('../ImageAssets/marsiokartlogo.jpg')} alt="Marsio Kart Logo" />
     </div>
   );
 };
