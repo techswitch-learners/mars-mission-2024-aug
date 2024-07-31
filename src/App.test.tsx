@@ -3,7 +3,7 @@ import { render, screen, fireEvent  } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from './App';
 import "@testing-library/jest-dom";
-import Hamburger from './Hamburgerbutton';
+import Hamburger from './Hamburgerbutton/Hamburgerbutton';
 
 // remove this test when real tests are added
 test('renders header', () => {
