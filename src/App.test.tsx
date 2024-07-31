@@ -8,8 +8,8 @@ import Hamburger from './Hamburgerbutton';
 // remove this test when real tests are added
 test('renders header', () => {
     render(<App />);
-    const header = screen.getByText(/MarsioKart/i);
-    expect(header).toBeInTheDocument();
+    const header = screen.getAllByText(/MarsioKart/i);
+    expect(header[0]).toBeInTheDocument();
   });
 
 test('calls onClick when Hamburger button is clicked', () => {
