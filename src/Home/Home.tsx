@@ -15,7 +15,7 @@ function Home() {
         <>
         <main>
         <DisplayBgImage />
-        <div className="testContent">
+        <div className="home-content">
         {/* Other components and content */}
             <form onSubmit={handleSubmit}>
                 <label>Enter name: 
