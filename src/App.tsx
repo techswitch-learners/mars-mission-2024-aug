@@ -10,6 +10,10 @@ import Footer from './Footer/Footer';
 function App() {
   return (
     <div className="App">
+
+      {/* line below is just an example of what to import to use the DisplayPictureOfDay function */}
+      <DisplayPicture />
+
       <Router>
         <h1>MarsioKart</h1>
           {/* line below is just an example of what to import to use the DisplayPictureOfDay function */}

@@ -8,31 +8,40 @@ interface PictureOfDay {
     url: string
 }
 
-export const DisplayPictureOfDay: React.FC = () => {   
+export const DisplayPicture: React.FC = () => {
 
     const [myPictureData, setMyPictureData] = useState<PictureOfDay | null>(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<Error | null>(null);
 
     const FetchPictureOfDay = async () => {
 
         const apiKey = process.env.REACT_APP_NASA_API_KEY;
         const link = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
-        // console.log(apiKey);
-        
-        const response = await fetch(link);
 
-        const apiKey = process.env.REACT_APP_NASA_API_KEY;
-        const link = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
-        // console.log(apiKey);
-        
-        const response = await fetch(link);
+        try {
+            setIsLoading(true);
+            const response = await fetch(link);
 
-        const apiKey = process.env.REACT_APP_NASA_API_KEY;
-        const link = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
-        // console.log(apiKey);
-        
-        const response = await fetch(link);
+            if (!response.ok) {
+                // throw const error: any = new Error('Network response was not ok');
+                throw new Error('Network response was not ok');
+            }
 
-        const pictureData = await response.json();
+            const pictureData = await response.json();
+            setMyPictureData(pictureData);
+            setIsLoading(false);
+
+        } catch (err: unknown) {
+            if (err instanceof Error) {
+                setError(err); // Set the actual Error object
+            } else {
+                setError(new Error('An unknown error occurred')); // Provide a default Error object
+            }
+
+            setIsLoading(false);
+        }
+
 
         //test picture data for when the API requests have reached their limit:
         //         const pictureData = {
@@ -45,8 +54,8 @@ export const DisplayPictureOfDay: React.FC = () => {
         //     "url": "https://apod.nasa.gov/apod/image/2407/Arp142_Webb_960.jpg"
         // }
 
-        console.log(pictureData);
-        setMyPictureData(pictureData);
+        // console.log(pictureData);
+        // setMyPictureData(pictureData);
     }
 
     useEffect(() => {
