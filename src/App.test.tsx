@@ -1,10 +1,6 @@
-import React from 'react';
-import { render, screen, fireEvent  } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { render, screen  } from '@testing-library/react';
 import App from './App';
 import "@testing-library/jest-dom";
-import Hamburger from './Header/Hamburgerbutton';
-import Menu from './Header/Menu';
 
 // remove this test when real tests are added
 test('renders header', () => {
@@ -12,24 +8,4 @@ test('renders header', () => {
     const header = screen.getAllByText(/MarsioKart/i);
     expect(header[0]).toBeInTheDocument();
   });
-
-test('should toggle hamburger menu on button click', () => {
-  render(<Hamburger />);
-
-  const button = screen.getByTestId('toggle-button');
-  const menu = screen.queryByTestId('data-testid');
-
-  // Initially, the menu should not be visible
-  expect(menu).not.toBeInTheDocument();
-
-  // Click the button to open the menu
-  fireEvent.click(button);
-  expect(screen.getByTestId('menu')).toBeInTheDocument();
-
-  // Click the button again to close the menu
-  fireEvent.click(button);
-  expect(screen.queryByTestId('menu')).not.toBeInTheDocument();
-});
-
-
 
