@@ -43,4 +43,5 @@ export const DisplayPictureOfDay = () => {
     if (!myPictureData) return (<div>EMPTY</div>);
     
     return myPictureData;
+
 };

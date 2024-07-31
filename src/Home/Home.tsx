@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import DisplayBgImage from '../images/DisplayBgImage';
 
 function Home() {
 
@@ -12,6 +13,10 @@ function Home() {
 
     return (
         <>
+        <main>
+        <DisplayBgImage />
+        <div className="testContent">
+        {/* Other components and content */}
             <form onSubmit={handleSubmit}>
                 <label>Enter name: 
                     <input type="text"
@@ -22,6 +27,9 @@ function Home() {
                 <button type="submit">Submit</button>
                 {submitStatus ? <p>Welcome {username}!</p> : null }
             </form>
+            </div>
+
+            </main>
         </>
     )
 }
