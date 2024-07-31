@@ -1,8 +1,8 @@
 import { render, screen, fireEvent  } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from './App';
-import "@testing-library/jest-dom";
 import Hamburger from './Hamburgerbutton';
+
 
 // remove this test when real tests are added
 test('renders header', () => {
@@ -10,11 +10,7 @@ test('renders header', () => {
     const header = screen.getByText(/MarsioKart/i);
     expect(header).toBeInTheDocument();
   });
-/* test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-}); */
+
 
 
 
