@@ -13,24 +13,7 @@ test('renders header', () => {
     expect(header[0]).toBeInTheDocument();
   });
 
-// test('calls onClick when Hamburger button is clicked', () => {
-//     const handleClick = jest.fn();
-//     render(<Hamburger label="Click Me" />);
-//     const button = screen.getByText('Click Me');
-//     fireEvent.click(button);
-//     expect(handleClick).towHaveBeenCalledTimes(1);;
-//   });
-
-//   test('test for hamburger menu options ', () => {
-//     const handleClick = jest.fn();
-//     render(<Hamburger label="Click Me" />);
-//     const button = screen.getByText('Click Me');
-//     fireEvent.click(button);
-//     const menuitem = screen.getByText('Your Acheivements');
-//     expect(menuitem).toBeInTheDocument();
-//   });
-
-test('should toggle menu on button click', () => {
+test('should toggle hamburger menu on button click', () => {
   render(<Hamburger />);
 
   const button = screen.getByTestId('toggle-button');
