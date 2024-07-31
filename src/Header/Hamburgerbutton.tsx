@@ -29,7 +29,7 @@ const Hamburger: React.FC<HamburgerProps> = () => {
     </button>
 {/* display the menu list of clicked/unclicked */}
     {isOpen && (
-        <div className="menu">
+        <div className="menu" data-testid="menu">
           <Menu items={menuItems} />
       </div>
   )}
