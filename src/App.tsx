@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.scss';
 import Home from './Home/Home';
+import { Quiz } from './Quiz/Quiz';
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
         <Routes>
           <Route path='/'
           element={<Home/>}/>
+          <Route path='/quiz'
+          element={<Quiz/>}/>
         </Routes>
       </Router>
     </div>
