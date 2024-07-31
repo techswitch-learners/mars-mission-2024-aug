@@ -4,6 +4,7 @@ import './App.scss';
 import Home from './Home/Home';
 import Header from './header';
 import { Quiz } from './Quiz/Quiz';
+import Footer from './Footer/Footer';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='/quiz'
           element={<Quiz/>}/>
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );

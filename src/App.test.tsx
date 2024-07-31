@@ -11,9 +11,6 @@ test('renders header', () => {
     expect(header).toBeInTheDocument();
   });
 
-
-
-
 test('calls onClick when Hamburger button is clicked', () => {
     const handleClick = jest.fn();
     render(<Hamburger onClick={handleClick} label="Click Me" />);
@@ -23,3 +20,4 @@ test('calls onClick when Hamburger button is clicked', () => {
   
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
+
