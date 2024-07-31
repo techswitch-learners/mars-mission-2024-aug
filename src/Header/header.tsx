@@ -2,13 +2,10 @@ import React from 'react';
 import Hamburger from './Hamburgerbutton';
 
 const Header: React.FC = () => {
-  const handleHamburgerClick = () => {
-    console.log('Hamburger menu clicked!');
-  };
-
   return (
     <div className="App">
-      <Hamburger onClick={handleHamburgerClick} label={""}/>
+      {/* call to display the hamburger button and menu items */}
+      <Hamburger />
     </div>
   );
 };
