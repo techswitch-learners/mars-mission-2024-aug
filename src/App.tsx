@@ -12,7 +12,7 @@ function App() {
     <div className="App">
 
       {/* line below is just an example of what to import to use the DisplayPictureOfDay function */}
-      <DisplayPictureOfDay />
+      {/* <DisplayPictureOfDay /> */}
 
       <Router>
         <h1>MarsioKart</h1>
