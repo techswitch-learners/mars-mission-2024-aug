@@ -6,44 +6,51 @@ interface PreviewImageProp {
     image: PictureOfDay;
 }
 
-interface ImageProps {
-    setMyPreviewImage: React.Dispatch<React.SetStateAction<PictureOfDay | null>>
-}
-
 interface BirthdayProps {
-    event: React.FormEvent<HTMLFormElement>;
+    event: React.FormEvent<HTMLFormElement>
     setMyPreviewImage: React.Dispatch<React.SetStateAction<PictureOfDay | null>>
 }
 
-const getTodaysImage = async (getTodaysImageProps: ImageProps) => {
-    const todaysPicture = await fetchAPI("https://api.nasa.gov/planetary/apod?api_key=")
-    getTodaysImageProps.setMyPreviewImage(todaysPicture);
-}
 
 export function PreviewImage() {
 
     const [myPreviewImage, setMyPreviewImage] = useState<PictureOfDay | null>(null);
     const [birthday, setBirthday] = useState('');
 
-    const handleSubmit = async (getBirthdayProps: BirthdayProps) => {
+    const handleTodayButtonClick = async () => {
+        try {
+            const todaysPicture = await fetchAPI("https://api.nasa.gov/planetary/apod?api_key=");
+            setMyPreviewImage(todaysPicture);
+            console.log(myPreviewImage);
 
-        getBirthdayProps.event.preventDefault();
-        const userBirthdayImage = await fetchAPI("https://api.nasa.gov/planetary/apod?api_key=", birthday);
-        
-        getBirthdayProps.setMyPreviewImage(userBirthdayImage);
+        }
+        catch (error) {
+            console.error("Error fetching today's image:", error);
+        }
+
+    }
+
+    const handleBirthdayFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        try {
+            console.log(birthday);
+            const userBirthdayImage = await fetchAPI("https://api.nasa.gov/planetary/apod?api_key=", birthday);
+            setMyPreviewImage(userBirthdayImage);
+            console.log(myPreviewImage);
+        } catch (error) {
+            console.error("Error fetching today's image:", error);
+        }
     }
 
     return (
         <>
             <h4>CHOOSE THE IMAGE YOU WANT TO DISPLAY:</h4>
 
-            {/* <button type="button" id="random-date-button" onClick={getRandomDateImage}>Random</button> */}
-
             <button type="button"
                 id="todays-date-button"
-                onClick={() => getTodaysImage({ setMyPreviewImage })}>Today</button>
+                onClick={handleTodayButtonClick}>Today</button>
 
-            <form onSubmit={(event) => handleSubmit({ event, setMyPreviewImage })}>
+            <form onSubmit={handleBirthdayFormSubmit}>
 
                 <label>Birthday</label>
                 <input
@@ -55,7 +62,7 @@ export function PreviewImage() {
                 <button type="submit">Submit</button>
             </form>
 
-            <img src={myPreviewImage?.url} alt={myPreviewImage?.explanation} className="preview-chosen-image"/>
+            <img src={myPreviewImage?.url} alt={myPreviewImage?.explanation} className="preview-chosen-image" />
         </>
     )
 
