@@ -25,6 +25,8 @@ function Home(props:HomeProps) {
 
     const homeBackgroundImage = DisplayBackgroundImage();
 
+    const UserDisplayImage = fetchAPI("https://api.nasa.gov/planetary/apod?api_key=");
+
     return (
         <>
             <main className="home-content" style={{ backgroundImage: `url(${homeBackgroundImage})` }}>

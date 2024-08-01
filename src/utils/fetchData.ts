@@ -27,7 +27,9 @@ export async function fetchAPI(apiUrl: string, date = todaysDate) {
             "title": "Arp 142: Interacting Galaxies from Webb",
             "url": "https://apod.nasa.gov/apod/image/2407/Arp142_Webb_960.jpg"
         }
-        console.log(pictureData);
+
+        // console.log(pictureData);
+
         return pictureData;
     } catch (err) {
         throw err;
