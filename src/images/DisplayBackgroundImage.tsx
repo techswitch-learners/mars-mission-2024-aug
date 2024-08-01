@@ -9,7 +9,7 @@ interface PictureOfDay {
     url: string
 }
 
-export const DisplayPictureOfDay = () => {
+const DisplayBackgroundImage = () => {
     const [myPictureData, setMyPictureData] = useState<PictureOfDay | null>(null);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<Error | null>(null);
@@ -19,7 +19,7 @@ export const DisplayPictureOfDay = () => {
         try {
             setIsLoading(true);
 
-           const pictureData = await fetchAPI("https://api.nasa.gov/planetary/apod?api_key=");
+            const pictureData = await fetchAPI("https://api.nasa.gov/planetary/apod?api_key=");
 
             setMyPictureData(pictureData);
             setIsLoading(false);
@@ -41,7 +41,10 @@ export const DisplayPictureOfDay = () => {
     if (isLoading) return (<div>Is Loading...</div>);
     if (error) return (<div>{error.message}</div>);
     if (!myPictureData) return (<div>EMPTY</div>);
-    
-    return myPictureData;
+
+
+    return myPictureData.hdurl; 
 
 };
+
+export default DisplayBackgroundImage;
