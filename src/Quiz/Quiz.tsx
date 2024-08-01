@@ -6,7 +6,7 @@ interface QuizProps{
     username:string;
 }
 
-export function Quiz (props:getUserProp) {
+export function Quiz (props:QuizProps) {
     const listOfQuestions = getQuizQuestions();
 
     const [currentIndex, setCurrentIndex] = useState<number>(0);
