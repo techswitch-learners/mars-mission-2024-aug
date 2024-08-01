@@ -29,7 +29,7 @@ function Home(props:HomeProps) {
         <>
             <main className="home-content" style={{ backgroundImage: `url(${homeBackgroundImage})` }}>
                 {/* Other components and content */}
-                <form onSubmit={handleSubmit}>
+                <form className="form" onSubmit={handleSubmit}>
                     <label>Enter name:
                         <input type="text"
                             value={props.username}
