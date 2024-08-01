@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DisplayBackgroundImage from '../images/DisplayBackgroundImage';
+import './Home.scss'
 
 function Home() {
 
