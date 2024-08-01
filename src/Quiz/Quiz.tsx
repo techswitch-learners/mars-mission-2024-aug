@@ -1,10 +1,10 @@
 import { QuestionDisplay } from "../QuestionDisplay/QuestionDisplay"
 
-interface getUserProp{
+interface QuizProps{
     username:string;
 }
 
-export function Quiz (props:getUserProp) {
+export function Quiz (props:QuizProps) {
     return (
         <div>
             User : {props.username}
