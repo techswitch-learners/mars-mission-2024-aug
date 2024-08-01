@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #2D3047;
+}
+
+@media only screen and (min-width: 480px) {
+    img {
+        width: 70vw;
+        align-self: center;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    img {
+        width: 40vw;
+        align-self: center;
+    }
+}
