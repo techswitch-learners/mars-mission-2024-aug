@@ -43,9 +43,7 @@ const DisplayBgImage = () => {
     if (!myPictureData) return (<div>EMPTY</div>);
 
 
-    return (
-        <img className='background-img' src={myPictureData.hdurl} />
-    )
+    return myPictureData.hdurl; 
 
 };
 

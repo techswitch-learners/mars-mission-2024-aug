@@ -41,23 +41,8 @@ a {
   text-decoration: none;
 }
 
-// main is the component enclosing the Home content, including a background image and the text content it will have above it.
-// The layering of the content is done with grid: main is the parent, .backrground-img and .home-content are its children
-main {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-
-.background-img {
-  z-index: -2;
-  grid-area: 1 / 1 / 3 / 2;
-}
-
 .home-content {
   color: $text-color;
-  z-index: 0;
-  grid-area: 1 / 1 / 2 / 2;
+  width: 100vw;
+  height: 100vh;
 }
