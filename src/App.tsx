@@ -18,7 +18,7 @@ function App() {
           <Route path='/quiz'
             element={<Quiz username={username}/>} />
         </Routes>
-        <Footer />
+        <Footer/>
       </Router>
     </div>
   );
