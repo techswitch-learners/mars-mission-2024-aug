@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DisplayBackgroundImage from '../images/DisplayBackgroundImage';
 
-function Home() {
+interface getUserProp{
+    username:string;
+    setUsername:(uname:string)=>void;
+}
 
-    const [username, setUsername] = useState("");
+function Home(props:getUserProp) {
+
+    //const [username, setUsername] = useState("");
     const [submitStatus, setSubmitStatus] = useState(false);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -28,12 +33,13 @@ function Home() {
                 <form onSubmit={handleSubmit}>
                     <label>Enter name:
                         <input type="text"
-                            value={username}
-                            onChange={username => setUsername(username.target.value)}
+                            value={props.username}
+                            //onChange={username => setUsername(username.target.value)}
+                            onChange={(username) => {props.setUsername(username.target.value)}}
                         />
                     </label>
                     <button type="submit">Submit</button>
-                    {submitStatus ? <p>Welcome {username}!</p> : null}
+                    {submitStatus ? <p>Welcome {props.username}!</p> : null}
                 </form>
 
                 <button className="startQuizButton" onClick={routeChange}>

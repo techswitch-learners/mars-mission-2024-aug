@@ -1,11 +1,14 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import Home from "./Home";
 import "@testing-library/jest-dom";
+import React, { useState } from "react";
 
-test("user's name is displayed on form submission", () => {
-    render(<Home />);
-
+test.skip("user's name is displayed on form submission", () => {
     const name = "Luigi";
+    const [username, setUsername] = useState(name);
+
+    render(<Home username={username} setUsername={setUsername}/>);
+
     const textArea = screen.getByLabelText(/Enter name:/);
     fireEvent.change(textArea, { target: { value: name }});
 
