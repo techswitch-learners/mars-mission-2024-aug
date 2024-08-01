@@ -29,6 +29,10 @@ function Home() {
                     {submitStatus ? <p>Welcome {username}!</p> : null}
                 </form>
 
+                <button className="startQuizButton" >
+                     Start quiz 
+                </button>
+
             </main>
         </>
     )
