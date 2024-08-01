@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DisplayBackgroundImage from '../images/DisplayBackgroundImage';
+import { PreviewImage } from "../images/PreviewImage";
 
 interface getUserProp{
     username:string;
@@ -41,6 +42,8 @@ function Home(props:getUserProp) {
                     <button type="submit">Submit</button>
                     {submitStatus ? <p>Welcome {props.username}!</p> : null}
                 </form>
+
+                <PreviewImage />
 
                 <button className="startQuizButton" onClick={routeChange}>
                      Start quiz 
