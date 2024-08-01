@@ -15,7 +15,7 @@ export function Quiz () {
         if (currentIndex === listOfQuestions.length-1) {
             setButtonText("Finish")
         }
-    }, [currentIndex]);
+    }, [currentIndex, listOfQuestions.length]);
     
     function updateCurrentIndex() {
         if (currentIndex < listOfQuestions.length-1) {
