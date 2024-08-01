@@ -17,9 +17,6 @@ export function Quiz () {
         }
     }, [currentIndex]);
     
-
-    let lastQuestion = false;
-    
     function updateCurrentIndex() {
         if (currentIndex < listOfQuestions.length-1) {
             setCurrentIndex(currentIndex + 1);
