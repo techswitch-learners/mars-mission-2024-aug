@@ -6,8 +6,6 @@ import Header from './Header/Header';
 import { Quiz } from './Quiz/Quiz';
 import Footer from './Footer/Footer';
 
-
-
 function App() {
   return (
     <div className="App">
