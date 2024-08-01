@@ -3,13 +3,7 @@ import './Hamburgerbutton.scss'; // styling for the hmauburger button icon
 import Menu from '../Menu/Menu';
 import { menuItems } from '../Menu/MenuItems';
 
-interface HamburgerProps {
-  // onClick: () => void;
-    // label: string;
-
-}
-
-const Hamburger: React.FC<HamburgerProps> = () => {
+const Hamburger: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
