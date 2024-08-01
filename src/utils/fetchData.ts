@@ -1,9 +1,15 @@
 // 1. .env has to be created in root
 // 2. inside .env, it should be REACT_APP_NASA_API_KEY="<your api key>"
 
-export async function fetchAPI(apiUrl: string) {
+
+const year = new Date().getFullYear()
+const month = (new Date().getMonth()) + 1
+const date = new Date().getDate()
+const todaysDate = `${year}-${month}-${date}`
+
+export async function fetchAPI(apiUrl: string, date = todaysDate) {
     const apiKey = process.env.REACT_APP_NASA_API_KEY;
-    const link = `${apiUrl}${apiKey}`;
+    const link = `${apiUrl}${apiKey}&date=${date}`;
 
     try {
         const response = await fetch(link);
