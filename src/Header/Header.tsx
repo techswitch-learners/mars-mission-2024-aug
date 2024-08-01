@@ -1,7 +1,7 @@
 import React from 'react';
 import Hamburger from '../Hamburgerbutton/Hamburgerbutton';
 
-const logo = require('../ImageAssets/marsiokartlogo.jpg')
+const logo = require('../ImageAssets/marsiokartlogo.png')
 
 const Header: React.FC = () => {
 
