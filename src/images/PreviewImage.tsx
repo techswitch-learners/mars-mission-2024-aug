@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
 import { PictureOfDay } from "./DisplayPicture";
 
-export function PreviewImage({ imageProp }: { imageProp: PictureOfDay }) {
+interface PreviewImageProp {
+    image: PictureOfDay;
+}
+
+    export function PreviewImage(imageProp: PreviewImageProp) { 
 
     const [myPreviewImage, setMyPreviewImage] = useState<PictureOfDay | null>(null);
 
     useEffect(() => {
-        setMyPreviewImage(imageProp);
+        setMyPreviewImage(imageProp.image); 
     }, [])
 
     return (
