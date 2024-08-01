@@ -6,21 +6,18 @@ import Header from './Header/header';
 import { Quiz } from './Quiz/Quiz';
 import Footer from './Footer/Footer';
 
-
-
 function App() {
   return (
     <div className="App">
       <Router>
-        <h1>MarsioKart</h1>
         <Header/>
         <Routes>
           <Route path='/'
-          element={<Home/>}/>
+            element={<Home />} />
           <Route path='/quiz'
-          element={<Quiz/>}/>
+            element={<Quiz />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </Router>
     </div>
   );

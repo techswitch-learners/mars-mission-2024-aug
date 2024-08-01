@@ -8,4 +8,3 @@ test('renders header', () => {
     const header = screen.getAllByText(/MarsioKart/i);
     expect(header[0]).toBeInTheDocument();
   });
-

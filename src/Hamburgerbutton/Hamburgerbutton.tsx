@@ -18,11 +18,11 @@ const Hamburger: React.FC<HamburgerProps> = () => {
     console.log('Hamburger menu display options!');
     <Menu items={menuItems}  />
   };
-
   return (
     <div>
     <button onClick={handleClick} className="hamburger" data-testid="toggle-button">
          {/* draw the 3 lines which make up the hmburger  */}
+
         <div className="line" />
         <div className="line" />
         <div className="line" />
