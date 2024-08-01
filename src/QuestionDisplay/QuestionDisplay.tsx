@@ -1,5 +1,4 @@
-import { getQuizQuestions, Answer, Question } from "../getQuizQuestions/getQuizQuestions";
-import { Quiz } from "../Quiz/Quiz";
+import { Question } from "../getQuizQuestions/getQuizQuestions";
 
 interface QuestionDisplayProp{
     question: Question;
