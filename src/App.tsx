@@ -8,7 +8,7 @@ import Footer from './Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Router>
         <Header/>
         <Routes>
