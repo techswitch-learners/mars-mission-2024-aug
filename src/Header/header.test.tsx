@@ -20,6 +20,3 @@ test('should toggle hamburger menu on button click', () => {
     expect(screen.queryByTestId('menu')).not.toBeInTheDocument();
   });
   
-  
-  
-  
