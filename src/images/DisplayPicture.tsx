@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchAPI } from '../utils/fetchData';
 
-export interface PictureOfDay {
+interface PictureOfDay {
     date: string,
     explanation: string,
     hdurl: string,
