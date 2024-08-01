@@ -1,5 +1,5 @@
 import React from 'react';
-import Hamburger from './Hamburgerbutton';
+import Hamburger from '../Hamburgerbutton/Hamburgerbutton';
 
 const Header: React.FC = () => {
   return (

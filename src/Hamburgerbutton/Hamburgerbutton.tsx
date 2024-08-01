@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Hamburgerbutton.scss'; // styling for the hmauburger button icon
-import Menu from './Menu'
-import { menuItems } from './MenuItems';
+import Menu from '../Menu/Menu';
+import { menuItems } from '../Menu/MenuItems';
 
 interface HamburgerProps {
   // onClick: () => void;

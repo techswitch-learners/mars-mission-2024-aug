@@ -1,6 +1,6 @@
 import { render, screen, fireEvent  } from '@testing-library/react';
 import "@testing-library/jest-dom";
-import Hamburger from './Hamburgerbutton';
+import Hamburger from '../Hamburgerbutton/Hamburgerbutton';
 
 test('should toggle hamburger menu on button click', () => {
     render(<Hamburger />);
