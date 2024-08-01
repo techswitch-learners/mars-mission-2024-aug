@@ -2,7 +2,7 @@ import { QuestionDisplay } from "../QuestionDisplay/QuestionDisplay"
 import { getQuizQuestions } from "../getQuizQuestions/getQuizQuestions"
 import { useState, useEffect } from "react";
 
-interface getUserProp{
+interface QuizProps{
     username:string;
 }
 
@@ -25,7 +25,7 @@ export function Quiz (props:getUserProp) {
             setCurrentIndex(currentIndex + 1);
         }
     }
-
+    
     return (
         <div>
             User : {props.username}
