@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DisplayBgImage from '../images/DisplayBgImage';
+import DisplayBackgroundImage from '../images/DisplayBackgroundImage';
 
 function Home() {
 
@@ -11,11 +11,11 @@ function Home() {
         setSubmitStatus(true);
     }
 
-    const homeBgImg = DisplayBgImage();
+    const homeBackgroundImage = DisplayBackgroundImage();
 
     return (
         <>
-            <main className="home-content" style={{ backgroundImage: `url(${homeBgImg})` }}>
+            <main className="home-content" style={{ backgroundImage: `url(${homeBackgroundImage})` }}>
 
                 {/* Other components and content */}
                 <form onSubmit={handleSubmit}>

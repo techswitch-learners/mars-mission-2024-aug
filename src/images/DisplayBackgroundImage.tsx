@@ -9,7 +9,7 @@ interface PictureOfDay {
     url: string
 }
 
-const DisplayBgImage = () => {
+const DisplayBackgroundImage = () => {
     const [myPictureData, setMyPictureData] = useState<PictureOfDay | null>(null);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<Error | null>(null);
@@ -47,4 +47,4 @@ const DisplayBgImage = () => {
 
 };
 
-export default DisplayBgImage;
+export default DisplayBackgroundImage;
