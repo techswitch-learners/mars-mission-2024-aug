@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import DisplayBackgroundImage from '../images/DisplayBackgroundImage';
 
 function Home() {
@@ -10,6 +11,12 @@ function Home() {
         event.preventDefault();
         setSubmitStatus(true);
     }
+
+    let navigate = useNavigate(); 
+    const routeChange = () =>{ 
+        let path = '/quiz'; 
+        navigate(path);
+  }
 
     const homeBackgroundImage = DisplayBackgroundImage();
 
@@ -29,7 +36,7 @@ function Home() {
                     {submitStatus ? <p>Welcome {username}!</p> : null}
                 </form>
 
-                <button className="startQuizButton" >
+                <button className="startQuizButton" onClick={routeChange}>
                      Start quiz 
                 </button>
 
