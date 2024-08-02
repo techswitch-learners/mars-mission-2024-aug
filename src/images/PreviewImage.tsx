@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { PictureOfDay } from "./DisplayPicture";
 import { fetchAPI, fetchRandomAPI } from "../utils/fetchData";
 
