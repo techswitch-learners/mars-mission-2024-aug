@@ -1,16 +1,17 @@
-import { getQuizQuestions } from "../getQuizQuestions/getQuizQuestions";
+import { Question } from "../getQuizQuestions/getQuizQuestions";
 
-export function QuestionDisplay() {
-    const questions = getQuizQuestions();
+interface QuestionDisplayProp{
+    question: Question;
+}
 
-    const question = questions[Math.floor(Math.random() * questions.length)];
+export function QuestionDisplay(props: QuestionDisplayProp) {
 
     return (
         <div>
-            {question.question} <br/>
-            <input type="radio" name="answer" id="radio-button1" value="0" /> {question.answers[0].answer} <br/>
-            <input type="radio" name="answer" id="radio-button2" value="1" /> {question.answers[1].answer} <br/>
-            <input type="radio" name="answer" id="radio-button3" value="2" /> {question.answers[2].answer} <br/>
+            {props.question.question} <br/>
+            <input type="radio" name="answer" id="radio-button1" value="0" /> {props.question.answers[0].answer} <br/>
+            <input type="radio" name="answer" id="radio-button2" value="1" /> {props.question.answers[1].answer} <br/>
+            <input type="radio" name="answer" id="radio-button3" value="2" /> {props.question.answers[2].answer} <br/>
         </div>
 
     )

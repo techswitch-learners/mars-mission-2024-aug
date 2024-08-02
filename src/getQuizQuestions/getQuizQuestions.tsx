@@ -1,9 +1,9 @@
-type Answer = {
+export type Answer = {
     answer: string,
     isCorrect: boolean
 }
 
-type Question = {
+export type Question = {
     question: string,
     answers: Array<Answer>
 }
