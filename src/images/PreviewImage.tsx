@@ -6,12 +6,6 @@ interface PreviewImageProp {
     image: PictureOfDay;
 }
 
-interface BirthdayProps {
-    event: React.FormEvent<HTMLFormElement>
-    setMyPreviewImage: React.Dispatch<React.SetStateAction<PictureOfDay | null>>
-}
-
-
 export function PreviewImage() {
 
     const [myPreviewImage, setMyPreviewImage] = useState<PictureOfDay | null>(null);
@@ -25,7 +19,6 @@ export function PreviewImage() {
         catch (error) {
             console.error("Error fetching today's image:", error);
         }
-
     }
 
     const handleBirthdayFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -47,7 +40,6 @@ export function PreviewImage() {
                 onClick={handleTodayButtonClick}>Today</button>
 
             <form onSubmit={handleBirthdayFormSubmit}>
-
                 <label>Birthday</label>
                 <input
                     type="date"
