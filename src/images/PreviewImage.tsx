@@ -10,7 +10,7 @@ export function PreviewImage() {
     const handleRandomButtonClick = async () => {
         try {
             const randomPicture = await fetchRandomAPI("https://api.nasa.gov/planetary/apod?api_key=");
-            setMyPreviewImage(randomPicture);
+            setMyPreviewImage(randomPicture[0]);
             console.log(myPreviewImage);
 
         }
