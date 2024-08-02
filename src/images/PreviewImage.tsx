@@ -21,8 +21,6 @@ export function PreviewImage() {
         try {
             const todaysPicture = await fetchAPI("https://api.nasa.gov/planetary/apod?api_key=");
             setMyPreviewImage(todaysPicture);
-            console.log(myPreviewImage);
-
         }
         catch (error) {
             console.error("Error fetching today's image:", error);
@@ -33,10 +31,8 @@ export function PreviewImage() {
     const handleBirthdayFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
-            console.log(birthday);
             const userBirthdayImage = await fetchAPI("https://api.nasa.gov/planetary/apod?api_key=", birthday);
             setMyPreviewImage(userBirthdayImage);
-            console.log(myPreviewImage);
         } catch (error) {
             console.error("Error fetching today's image:", error);
         }
