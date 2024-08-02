@@ -15,9 +15,7 @@ export async function fetchAPI(apiUrl: string, date = todaysDate) {
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-
         const pictureData = await response.json();
-        console.log(pictureData);
         return pictureData;
     } catch (err) {
         throw err;
